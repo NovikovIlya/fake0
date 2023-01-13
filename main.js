@@ -53,7 +53,7 @@ const getFamilyMember = (id) => {
     })
 }
 
-getFamilyMember(111)
+const zet = getFamilyMember(111)
     .then(data =>{ return getCoffe(data);})
     .then(data2 => {
         console.log(data2)
@@ -71,3 +71,6 @@ getFamilyMember(222)
         console.log(err)
     });
    
+const divv = document.querySelector('.divv')
+// divv.appendChild(zet)
+console.log(zet.id)
