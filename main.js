@@ -5,3 +5,4 @@ header.innerText = 'learn!!!!'
 div.appendChild(header)
 document.body.appendChild(div)
 
+console.log(div)
