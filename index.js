@@ -60,7 +60,7 @@ let user1 = {
     id: '25',
 };
 
-async function getUserz1(names){
+async function getUserz1(){
     let response = await fetch(`https://reqres.in/api/users`,{
         // method: 'GET',
         // headers: {
