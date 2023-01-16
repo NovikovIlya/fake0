@@ -27,14 +27,114 @@ async function fetchHandler(){
 fetchHandler()
 
 button.addEventListener('click',()=>{
-    let isLoaded = image.complete;
-
-    if (isLoaded){
-        fetchHandler()
-    }
-    
-    
+    fetchHandler()
 })
 
 
+
+
+async function getUsers(names) {
+    const responses = await Promise.all(names.map(name => fetch(`https://api.github.com/users/${name}`)));
+    
+    return (await Promise.all(responses.map(response => response.json() )));
+}
+
+let user = {
+    name: 'Johnzzz',
+    surname: 'Smithzzz'
+};
+
+async function getUserz(names){
+    let response = await fetch(`https://reqres.in/api/users`,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(user)
+    });
+    let result = await response.json();
+    console.log(result)
+}
+
+let user1 = {
+    id: '25',
+};
+
+async function getUserz1(names){
+    let response = await fetch(`https://reqres.in/api/users`,{
+        // method: 'GET',
+        // headers: {
+        //     'Content-Type': 'application/json;charset=utf-8'
+        // },
+        // body: JSON.stringify(user1)
+        method: "GET",
+         headers: {
+             Accept: "application/json",
+        "Content-Type": "application/json; charset=UTF-8",
+         },
+        
+    });
+    let result = await response.json();
+    kek = result.data;
+
+    console.log(kek)
+    
+    const vay = kek.find(item => {
+        return(
+        item.id == 2)})
+    console.log(vay)
+}
+
+let doggy = {
+    "id": 0,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggieZZZ",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+};
+
+async function getUserzDog(){
+    let response = await fetch(`https://reqres.in/api/users`,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(doggy)
+    });
+    let result = await response.json();
+    console.log(result)
+}
+
+async function getUserz1Doggy(){
+    let response = await fetch(`https://reqres.in/api/users/2`,{
+        // method: 'GET',
+        // headers: {
+        //     'Content-Type': 'application/json;charset=utf-8'
+        // },
+        // body: JSON.stringify(user1)
+        method: "GET",
+         headers: {
+             Accept: "application/json",
+        "Content-Type": "application/json; charset=UTF-8",
+         },
+        
+    });
+    let result = await response.json();
+    
+
+    console.log(result)
+    
+    
+}
 
