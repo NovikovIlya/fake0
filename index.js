@@ -2,7 +2,7 @@ const button = document.querySelector('.btn')
 const image = document.querySelector('.img')
 const url = 'http://aws.random.cat/meow'
 const zet1 = document.querySelector('.zet')
-const coffeUrl = 'https://api.sampleapis.com/coffee/hot'
+const coffeUrl = 'https://api.sampleapis.com/coffee/mde'
 
 async function fetchHandler(){
     try{
