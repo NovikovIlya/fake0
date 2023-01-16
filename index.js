@@ -26,7 +26,7 @@ async function fetchHandler(){
 
 fetchHandler()
 
-button.addEventListener('click',()=>{
+button.addEventListener("click",()=>{
     fetchHandler()
 })
 
